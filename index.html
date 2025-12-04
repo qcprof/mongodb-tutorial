@@ -38,7 +38,6 @@
       overflow-x: hidden;
     }
 
-    /* Header */
     .header {
       background: linear-gradient(135deg, var(--bg-secondary) 0%, #2d1b00 100%);
       border-bottom: 3px solid var(--amber);
@@ -116,10 +115,8 @@
     .header .subtitle {
       color: var(--text-secondary);
       font-size: 1.1rem;
-      margin-bottom: 1rem;
     }
 
-    /* Navigation */
     .nav {
       background-color: var(--bg-secondary);
       padding: 1rem 2rem;
@@ -152,14 +149,12 @@
       border-color: var(--amber);
     }
 
-    /* Container */
     .container {
       max-width: 1400px;
       margin: 0 auto;
       padding: 2rem;
     }
 
-    /* Section */
     .section {
       background-color: var(--bg-secondary);
       border: 1px solid var(--border);
@@ -208,7 +203,6 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Code blocks */
     .code-block {
       position: relative;
       margin: 1.5rem 0;
@@ -286,7 +280,6 @@
       font-size: 0.9em;
     }
 
-    /* Tables */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -318,7 +311,6 @@
       background-color: rgba(251, 191, 36, 0.05);
     }
 
-    /* Alert boxes */
     .alert {
       padding: 1.25rem;
       border-radius: 0.75rem;
@@ -375,7 +367,6 @@
       color: var(--error);
     }
 
-    /* Collapsible sections */
     .collapsible {
       background-color: var(--bg-tertiary);
       border: 1px solid var(--border);
@@ -429,7 +420,6 @@
       border-top: 1px solid var(--border);
     }
 
-    /* Steps */
     .steps {
       counter-reset: step-counter;
     }
@@ -464,7 +454,6 @@
       margin-top: 0;
     }
 
-    /* Comparison grid */
     .comparison-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -512,7 +501,6 @@
       color: var(--error);
     }
 
-    /* Footer */
     .footer {
       background-color: var(--bg-secondary);
       border-top: 2px solid var(--amber);
@@ -522,7 +510,6 @@
       margin-top: 3rem;
     }
 
-    /* Scrollbar */
     ::-webkit-scrollbar {
       width: 12px;
       height: 12px;
@@ -541,7 +528,6 @@
       background: var(--amber);
     }
 
-    /* Back to top button */
     .back-to-top {
       position: fixed;
       bottom: 2rem;
@@ -574,7 +560,42 @@
       transform: translateY(-4px);
     }
 
-    /* Responsive */
+    .id-approaches {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .id-approach {
+      background-color: var(--bg-tertiary);
+      border: 2px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+    }
+
+    .id-approach h4 {
+      color: var(--amber);
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .id-approach.recommended {
+      border-color: var(--success);
+    }
+
+    .recommended-badge {
+      display: inline-block;
+      background-color: var(--success);
+      color: var(--bg-primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+
     @media (max-width: 768px) {
       .header h1 {
         font-size: 1.8rem;
@@ -612,48 +633,10 @@
         align-items: flex-start;
       }
     }
-
-    /* Two-column layout for ID approaches */
-    .id-approaches {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-
-    .id-approach {
-      background-color: var(--bg-tertiary);
-      border: 2px solid var(--border);
-      border-radius: 0.75rem;
-      padding: 1.5rem;
-    }
-
-    .id-approach h4 {
-      color: var(--amber);
-      margin-top: 0;
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
-    }
-
-    .id-approach.recommended {
-      border-color: var(--success);
-    }
-
-    .recommended-badge {
-      display: inline-block;
-      background-color: var(--success);
-      color: var(--bg-primary);
-      padding: 0.25rem 0.75rem;
-      border-radius: 1rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-left: 0.5rem;
-    }
   </style>
 </head>
 
 <body>
-  <!-- Header -->
   <div class="header">
     <div class="header-content">
       <div class="header-main">
@@ -669,57 +652,96 @@
     </div>
   </div>
 
-  <!-- Navigation -->
   <nav class="nav">
     <ul class="nav-links">
       <li><a href="#intro">Introduction</a></li>
       <li><a href="#json">Understanding JSON</a></li>
+      <li><a href="#model">Data Models</a></li>
       <li><a href="#setup">Setup & Insert</a></li>
-      <li><a href="#embedded">Embedded</a></li>
-      <li><a href="#referenced">Referenced</a></li>
+      <li><a href="#embedded">Embedded Approach</a></li>
+      <li><a href="#referenced">Referenced Approach</a></li>
       <li><a href="#comparison">Comparison</a></li>
       <li><a href="#exercises">Exercises</a></li>
+      <li><a href="#reference">Quick Reference</a></li>
     </ul>
   </nav>
 
-  <!-- Container -->
   <div class="container">
 
-    <!-- Introduction -->
     <section id="intro" class="section">
       <h2>📚 Introduction</h2>
 
       <div class="alert alert-info">
         <span class="alert-icon">💡</span>
         <div>
-          <strong>What You'll Build:</strong> A sales order system for "Julia's Cookies" using MongoDB - implemented TWO
-          ways to understand embedded vs. referenced document structures.
+          <strong>What You'll Learn:</strong> You'll create a sales order system for "Julia's Cookies" using MongoDB.
+          You'll implement it TWO different ways to understand the strengths and weaknesses of each approach.
         </div>
       </div>
 
       <h3>Learning Objectives</h3>
       <ul>
-        <li>Understand JSON data format and MongoDB's BSON</li>
-        <li>Learn two approaches for the <code>_id</code> field</li>
-        <li>Create collections and insert documents</li>
-        <li>Compare embedded vs. referenced structures</li>
-        <li>Query and aggregate sales data</li>
+        <li>Understand JSON data format and how MongoDB extends it with BSON</li>
+        <li>Learn the difference between auto-generated and custom _id fields</li>
+        <li>Create collections in MongoDB Atlas</li>
+        <li>Insert documents using different ID strategies</li>
+        <li>Understand embedded vs. referenced document structures</li>
+        <li>Perform queries and aggregations on sales data</li>
+        <li>Apply database concepts to accounting scenarios</li>
+      </ul>
+
+      <h3>Business Scenario</h3>
+      <p>Julia's Cookies is a small bakery that sells cookies online. The system needs to track:</p>
+      <ul>
+        <li><strong>Customers</strong> - Who buys from us</li>
+        <li><strong>Products</strong> - What we sell (chocolate chip, oatmeal, sugar cookies)</li>
+        <li><strong>Sales Orders</strong> - Customer purchases with line items</li>
+      </ul>
+
+      <h3>Why This Matters for Accounting</h3>
+      <ul>
+        <li>Sales data drives revenue reporting</li>
+        <li>Customer relationships affect accounts receivable</li>
+        <li>Product information impacts inventory accounting</li>
+        <li>Database design affects how you query financial data</li>
+        <li>Modern ERP systems increasingly use document databases</li>
       </ul>
     </section>
 
-    <!-- Understanding JSON & BSON - Moved up and expanded -->
     <section id="json" class="section">
-      <h2>📄 Understanding JSON & BSON</h2>
+      <h2>📄 Understanding JSON (JavaScript Object Notation)</h2>
 
       <h3>What is JSON?</h3>
-      <p><strong>JSON (JavaScript Object Notation)</strong> is a lightweight, text-based data format. It's easy for
-        humans to read and machines to parse. MongoDB uses JSON syntax for inserting and querying data.</p>
+      <p>JSON (JavaScript Object Notation) is a lightweight, text-based data format that's easy for both humans to read
+        and machines to parse. It's the foundation of how MongoDB stores data.</p>
 
-      <h3>JSON Data Types</h3>
+      <h3>JSON Basics</h3>
+
+      <h4>1. JSON Data Types</h4>
+      <div class="code-block">
+        <div class="code-header">
+          <span class="code-label">JSON Data Types Example</span>
+          <button class="copy-btn" onclick="copyCode(this)">
+            <span>📋</span> Copy
+          </button>
+        </div>
+        <pre><code>{
+  "string": "John Smith",
+  "number": 42,
+  "decimal": 12.50,
+  "boolean": true,
+  "null_value": null,
+  "array": [1, 2, 3, "four"],
+  "object": {
+    "nested_key": "nested_value"
+  }
+}</code></pre>
+      </div>
+
       <table>
         <thead>
           <tr>
-            <th>Type</th>
+            <th>Data Type</th>
             <th>Example</th>
             <th>Notes</th>
           </tr>
@@ -728,7 +750,7 @@
           <tr>
             <td><strong>String</strong></td>
             <td><code>"John Smith"</code></td>
-            <td>Must use double quotes</td>
+            <td>Must use double quotes (not single)</td>
           </tr>
           <tr>
             <td><strong>Number</strong></td>
@@ -743,28 +765,43 @@
           <tr>
             <td><strong>Null</strong></td>
             <td><code>null</code></td>
-            <td>Represents no value</td>
+            <td>Represents absence of value</td>
           </tr>
           <tr>
             <td><strong>Array</strong></td>
-            <td><code>[1, 2, "three"]</code></td>
-            <td>Square brackets []</td>
+            <td><code>[1, 2, 3]</code></td>
+            <td>Ordered list, use square brackets</td>
           </tr>
           <tr>
             <td><strong>Object</strong></td>
             <td><code>{"key": "value"}</code></td>
-            <td>Curly braces {}</td>
+            <td>Key-value pairs, use curly braces</td>
           </tr>
         </tbody>
       </table>
 
-      <h3>JSON Syntax Rules</h3>
+      <h4>2. JSON Syntax Rules</h4>
+      <div class="alert alert-warning">
+        <span class="alert-icon">⚠️</span>
+        <div>
+          <strong>Critical JSON Rules:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li>Property names MUST be in double quotes: <code>"name"</code></li>
+            <li>Strings MUST use double quotes (not single): <code>"value"</code></li>
+            <li>No trailing commas: <code>{"a": 1, "b": 2}</code> ✅ vs <code>{"a": 1, "b": 2,}</code> ❌</li>
+            <li>No comments allowed in pure JSON</li>
+            <li>Keys must be unique within an object</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4>3. Valid vs Invalid JSON</h4>
       <div class="comparison-grid">
         <div class="comparison-card">
           <h3 style="color: var(--success);">✅ Valid JSON</h3>
           <div class="code-block">
             <div class="code-header">
-              <span class="code-label">Correct Format</span>
+              <span class="code-label">Correct</span>
               <button class="copy-btn" onclick="copyCode(this)">
                 <span>📋</span> Copy
               </button>
@@ -781,39 +818,29 @@
   }
 }</code></pre>
           </div>
-          <ul style="margin-top: 1rem;">
-            <li>✅ Property names in double quotes</li>
-            <li>✅ String values in double quotes</li>
-            <li>✅ Numbers without quotes</li>
-            <li>✅ No trailing commas</li>
-          </ul>
         </div>
 
         <div class="comparison-card">
           <h3 style="color: var(--error);">❌ Invalid JSON</h3>
           <div class="code-block">
             <div class="code-header">
-              <span class="code-label">Common Mistakes</span>
+              <span class="code-label">Incorrect - Don't use this!</span>
             </div>
             <pre><code>{
-  name: "John",          // ❌ No quotes on key
-  "email": 'john@x.com', // ❌ Single quotes
-  "age": 30,             // ❌ Trailing comma below
-  "tags": ["vip",],      // ❌ Trailing comma
+  name: "John",           // ❌ Missing quotes on key
+  "email": 'john@x.com',  // ❌ Single quotes
+  "age": 30,              // ❌ Trailing comma below
+  "tags": ["vip",],       // ❌ Trailing comma in array
 }</code></pre>
           </div>
-          <ul style="margin-top: 1rem;">
-            <li>❌ Missing quotes on property names</li>
-            <li>❌ Single quotes instead of double</li>
-            <li>❌ Trailing commas</li>
-            <li>❌ Comments (not allowed in pure JSON)</li>
-          </ul>
         </div>
       </div>
 
-      <h3>MongoDB Uses BSON, Not Pure JSON</h3>
-      <p>MongoDB doesn't store pure JSON - it uses <strong>BSON (Binary JSON)</strong>.</p>
+      <h3>How MongoDB Differs from JSON: BSON</h3>
+      <p>MongoDB doesn't actually store pure JSON - it uses <strong>BSON (Binary JSON)</strong>, which is a
+        binary-encoded serialization of JSON-like documents.</p>
 
+      <h4>Key Differences: JSON vs BSON</h4>
       <table>
         <thead>
           <tr>
@@ -825,106 +852,434 @@
         <tbody>
           <tr>
             <td><strong>Format</strong></td>
-            <td>Text (human-readable)</td>
+            <td>Text-based (human readable)</td>
             <td>Binary (machine-optimized)</td>
           </tr>
           <tr>
             <td><strong>Data Types</strong></td>
-            <td>6 basic types</td>
-            <td>Extended: ObjectId, Date, Decimal128, Binary, etc.</td>
-          </tr>
-          <tr>
-            <td><strong>Speed</strong></td>
-            <td>Slower to parse</td>
-            <td>Faster to traverse</td>
+            <td>6 types (string, number, boolean, null, array, object)</td>
+            <td>Extended types: Date, ObjectId, Binary, Int32, Int64, Decimal128, etc.</td>
           </tr>
           <tr>
             <td><strong>Size</strong></td>
             <td>Smaller as text</td>
-            <td>Slightly larger (includes metadata)</td>
+            <td>Slightly larger (includes type info + length)</td>
+          </tr>
+          <tr>
+            <td><strong>Speed</strong></td>
+            <td>Slower to parse</td>
+            <td>Faster to traverse and query</td>
+          </tr>
+          <tr>
+            <td><strong>Use Case</strong></td>
+            <td>Data interchange, APIs, config files</td>
+            <td>Database storage and internal operations</td>
           </tr>
         </tbody>
       </table>
 
-      <h3>BSON-Specific Types You'll Encounter</h3>
+      <h4>BSON-Specific Data Types You'll See</h4>
 
-      <h4>1. ObjectId - MongoDB's Unique Identifier</h4>
-      <div class="code-block">
-        <div class="code-header">
-          <span class="code-label">ObjectId Structure</span>
-          <button class="copy-btn" onclick="copyCode(this)">
-            <span>📋</span> Copy
-          </button>
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">ObjectId - MongoDB's Unique Identifier</span>
+          <span class="collapsible-icon">▼</span>
         </div>
-        <pre><code>ObjectId("507f1f77bcf86cd799439011")
-         └──────────┬───────────┘
-                12-byte hex string
-
-Components:
-- 4 bytes: Timestamp
-- 5 bytes: Random value
-- 3 bytes: Counter</code></pre>
-      </div>
-      <p><strong>Purpose:</strong> MongoDB automatically adds <code>_id: ObjectId(...)</code> to every document for
-        guaranteed uniqueness.</p>
-
-      <h4>2. Date - Proper Date/Time Storage</h4>
-      <div class="comparison-grid">
-        <div style="background-color: var(--bg-tertiary); padding: 1rem; border-radius: 0.5rem;">
-          <p><strong>JSON (as string):</strong></p>
-          <code>{ "order_date": "2024-01-15" }</code>
-        </div>
-        <div style="background-color: var(--bg-tertiary); padding: 1rem; border-radius: 0.5rem;">
-          <p><strong>BSON (as Date object):</strong></p>
-          <code>{ "order_date": ISODate("2024-01-15T00:00:00Z") }</code>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>What it is:</strong> A 12-byte unique identifier automatically generated by MongoDB</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">ObjectId Example</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>ObjectId("507f1f77bcf86cd799439011")</code></pre>
+            </div>
+            <p><strong>Structure (12 bytes):</strong></p>
+            <ul>
+              <li>4 bytes: Timestamp (when document was created)</li>
+              <li>5 bytes: Random value (unique to machine/process)</li>
+              <li>3 bytes: Counter (incrementing value)</li>
+            </ul>
+            <p><strong>Why it matters:</strong> MongoDB automatically adds an <code>_id</code> field with an ObjectId to
+              every document. This guarantees uniqueness across your entire database.</p>
+          </div>
         </div>
       </div>
 
-      <h4>3. NumberDecimal - Precise Money Values</h4>
-      <div class="alert alert-warning">
-        <span class="alert-icon">💰</span>
-        <div>
-          <strong>Critical for Accounting:</strong> Use NumberDecimal for monetary values to avoid rounding errors!
-          <br><br>
-          Regular: <code>{ "price": 12.50 }</code> ← Can have rounding errors<br>
-          Decimal: <code>{ "price": NumberDecimal("12.50") }</code> ← Exact precision
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Date - Proper Date/Time Storage</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>What it is:</strong> BSON stores dates as 64-bit integers (milliseconds since Unix epoch)</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Date in JSON vs BSON</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>// JSON (stored as string)
+{
+  "order_date": "2024-01-15"
+}
+
+// BSON (stored as Date object)
+{
+  "order_date": ISODate("2024-01-15T00:00:00Z")
+}</code></pre>
+            </div>
+            <p><strong>Why it matters:</strong> Date objects allow for proper date arithmetic, comparisons, and timezone
+              handling.</p>
+          </div>
         </div>
       </div>
 
-      <h3>Summary: What You Need to Know</h3>
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">NumberDecimal - Precise Decimal Numbers</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>What it is:</strong> 128-bit decimal type for exact decimal representation (critical for
+              financial data!)</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Regular Number vs Decimal128</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>// Regular number (can have rounding errors)
+{
+  "price": 12.50
+}
+
+// NumberDecimal (exact precision for money)
+{
+  "price": NumberDecimal("12.50")
+}</code></pre>
+            </div>
+            <p><strong>Why it matters:</strong> For accounting applications, you need exact decimal precision to avoid
+              rounding errors in financial calculations.</p>
+            <div class="alert alert-warning">
+              <span class="alert-icon">💰</span>
+              <div>
+                <strong>Accounting Tip:</strong> Always use NumberDecimal for monetary values to ensure accuracy in
+                financial reporting!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Summary: JSON vs BSON</h3>
       <div class="alert alert-info">
         <span class="alert-icon">📝</span>
         <div>
-          <strong>The Process:</strong>
+          <strong>Key Takeaway:</strong>
           <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
-            <li>You <strong>write</strong> JSON when inserting data</li>
-            <li>MongoDB <strong>stores</strong> it as BSON internally</li>
-            <li>MongoDB <strong>returns</strong> JSON when you query</li>
-            <li>BSON adds ObjectId, Date, Decimal types automatically</li>
-            <li>For this tutorial, focus on JSON syntax - MongoDB handles the rest!</li>
+            <li>You <strong>write</strong> JSON when inserting data into MongoDB</li>
+            <li>MongoDB <strong>stores</strong> it as BSON internally for efficiency</li>
+            <li>MongoDB <strong>returns</strong> data as JSON when you query</li>
+            <li>BSON adds powerful data types (ObjectId, Date, Decimal) that pure JSON doesn't have</li>
+            <li>For this tutorial, you'll work with JSON syntax, but MongoDB handles the BSON conversion automatically
+            </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Setup and ID Approaches - Combined section -->
-    <section id="setup" class="section">
-      <h2>⚙️ Setup & Understanding the _id Field</h2>
+    <section id="model" class="section">
+      <h2>🗂️ Understanding Database Design Approaches</h2>
 
-      <h3>Step 1: Access MongoDB Atlas</h3>
+      <h3>Relational Database Approach (Traditional)</h3>
+      <p>In a relational database, we create three separate tables with foreign keys linking them:</p>
+
+      <div class="code-block">
+        <div class="code-header">
+          <span class="code-label">Relational Structure</span>
+        </div>
+        <pre><code>CUSTOMERS TABLE
+┌──────────────┬──────────────┬───────────────────┐
+│ customer_id  │ name         │ email             │
+├──────────────┼──────────────┼───────────────────┤
+│ C001         │ John Smith   │ john@email.com    │
+│ C002         │ Sarah Jones  │ sarah@email.com   │
+└──────────────┴──────────────┴───────────────────┘
+
+PRODUCTS TABLE
+┌─────────────┬──────────────────┬────────────┐
+│ product_id  │ product_name     │ price      │
+├─────────────┼──────────────────┼────────────┤
+│ P001        │ Chocolate Chip   │ 12.00      │
+│ P002        │ Oatmeal Raisin   │ 10.00      │
+└─────────────┴──────────────────┴────────────┘
+
+ORDERS TABLE
+┌───────────┬──────────────┬──────────────┬──────────┐
+│ order_id  │ customer_id  │ product_id   │ quantity │
+├───────────┼──────────────┼──────────────┼──────────┤
+│ SO001     │ C001         │ P001         │ 2        │
+└───────────┴──────────────┴──────────────┴──────────┘</code></pre>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <h3>🔗 Embedded Approach</h3>
+          <p>Store ALL related data within a single document:</p>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-label">JSON</span>
+              <button class="copy-btn" onclick="copyCode(this)">
+                <span>📋</span> Copy
+              </button>
+            </div>
+            <pre><code>{
+  "order_id": "SO001",
+  "customer": {
+    "customer_id": "C001",
+    "name": "John Smith",
+    "email": "john@email.com"
+  },
+  "items": [
+    {
+      "product_name": "Chocolate Chip",
+      "quantity": 2,
+      "price": 12.00
+    }
+  ],
+  "total": 24.00
+}</code></pre>
+          </div>
+          <div class="pros-cons">
+            <h4 class="pro">✅ Pros:</h4>
+            <ul>
+              <li>Single query gets everything</li>
+              <li>Preserves historical data</li>
+              <li>Faster performance</li>
+            </ul>
+            <h4 class="con">❌ Cons:</h4>
+            <ul>
+              <li>Data duplication</li>
+              <li>More storage space</li>
+              <li>Hard to update master data</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comparison-card">
+          <h3>🔗 Referenced Approach</h3>
+          <p>Link documents using IDs (like foreign keys):</p>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-label">JSON</span>
+              <button class="copy-btn" onclick="copyCode(this)">
+                <span>📋</span> Copy
+              </button>
+            </div>
+            <pre><code>{
+  "order_id": "SO001",
+  "customer_id": "C001",
+  "items": [
+    {
+      "product_id": "P001",
+      "quantity": 2
+    }
+  ]
+}</code></pre>
+          </div>
+          <div class="pros-cons">
+            <h4 class="pro">✅ Pros:</h4>
+            <ul>
+              <li>No data duplication</li>
+              <li>Easy to update master data</li>
+              <li>Consistent information</li>
+            </ul>
+            <h4 class="con">❌ Cons:</h4>
+            <ul>
+              <li>Multiple queries needed</li>
+              <li>More complex to retrieve</li>
+              <li>Slower for reporting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3>MongoDB's _id Field: Two Approaches</h3>
+      <p>When you insert a document into MongoDB, you have two options for the <code>_id</code> field (MongoDB's primary
+        key):</p>
+
+      <div class="id-approaches">
+        <div class="id-approach recommended">
+          <h4>Approach A: Auto-Generated _id <span class="recommended-badge">RECOMMENDED</span></h4>
+          <p><strong>How it works:</strong> Let MongoDB automatically generate the <code>_id</code> field, and use your
+            own custom IDs as regular fields.</p>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-label">What You Insert</span>
+              <button class="copy-btn" onclick="copyCode(this)">
+                <span>📋</span> Copy
+              </button>
+            </div>
+            <pre><code>{
+  "order_id": "SO001",
+  "customer_id": "C001",
+  "order_date": "2024-01-15",
+  "total": 37.80
+}</code></pre>
+          </div>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-label">What MongoDB Stores</span>
+              <button class="copy-btn" onclick="copyCode(this)">
+                <span>📋</span> Copy
+              </button>
+            </div>
+            <pre><code>{
+  "_id": ObjectId("507f1f77bcf86cd799439011"),
+  "order_id": "SO001",
+  "customer_id": "C001",
+  "order_date": "2024-01-15",
+  "total": 37.80
+}</code></pre>
+          </div>
+          <p><strong>✅ Advantages:</strong></p>
+          <ul>
+            <li>MongoDB guarantees uniqueness automatically</li>
+            <li>No risk of duplicate key errors</li>
+            <li>You still have human-readable IDs for business logic</li>
+            <li>Best practice for beginners</li>
+          </ul>
+          <p><strong>⚠️ Considerations:</strong></p>
+          <ul>
+            <li>Two ID fields per document (minimal overhead)</li>
+            <li>Must query by <code>order_id</code> instead of <code>_id</code> for business operations</li>
+          </ul>
+          <div class="alert alert-success">
+            <span class="alert-icon">💡</span>
+            <div>
+              <strong>This Tutorial Uses Approach A:</strong> All examples use auto-generated <code>_id</code> with
+              custom business IDs like <code>order_id</code>, <code>customer_id</code>, etc.
+            </div>
+          </div>
+        </div>
+
+        <div class="id-approach">
+          <h4>Approach B: Custom _id</h4>
+          <p><strong>How it works:</strong> Override the <code>_id</code> field with your own custom value.</p>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-label">What You Insert</span>
+              <button class="copy-btn" onclick="copyCode(this)">
+                <span>📋</span> Copy
+              </button>
+            </div>
+            <pre><code>{
+  "_id": "SO001",
+  "customer_id": "C001",
+  "order_date": "2024-01-15",
+  "total": 37.80
+}</code></pre>
+          </div>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-label">What MongoDB Stores (Same)</span>
+              <button class="copy-btn" onclick="copyCode(this)">
+                <span>📋</span> Copy
+              </button>
+            </div>
+            <pre><code>{
+  "_id": "SO001",
+  "customer_id": "C001",
+  "order_date": "2024-01-15",
+  "total": 37.80
+}</code></pre>
+          </div>
+          <p><strong>✅ Advantages:</strong></p>
+          <ul>
+            <li>Simpler structure (one ID instead of two)</li>
+            <li>Human-readable primary key</li>
+            <li>Works well if you have existing ID schemes</li>
+          </ul>
+          <p><strong>⚠️ Considerations:</strong></p>
+          <ul>
+            <li><strong>You must ensure uniqueness</strong> - MongoDB will reject duplicate <code>_id</code> values</li>
+            <li>Insert will fail if <code>_id</code> already exists</li>
+            <li>More responsibility on you as the developer</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Querying with Different _id Approaches</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Approach A (Auto _id)</th>
+            <th>Approach B (Custom _id)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Find order SO001</strong></td>
+            <td><code>{ "order_id": "SO001" }</code></td>
+            <td><code>{ "_id": "SO001" }</code></td>
+          </tr>
+          <tr>
+            <td><strong>Find by MongoDB's ID</strong></td>
+            <td><code>{ "_id": ObjectId("...") }</code></td>
+            <td><code>{ "_id": "SO001" }</code></td>
+          </tr>
+          <tr>
+            <td><strong>Uniqueness guaranteed by</strong></td>
+            <td>MongoDB (automatic)</td>
+            <td>You (manual)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="alert alert-info">
+        <span class="alert-icon">💡</span>
+        <div>
+          <strong>For This Tutorial:</strong> We use <strong>Approach A</strong> (auto-generated <code>_id</code> with
+          custom business IDs). This is the safest option for learning and matches most real-world applications where
+          MongoDB manages the primary key while you maintain business-friendly identifiers.
+        </div>
+      </div>
+    </section>
+
+    <section id="setup" class="section">
+      <h2>⚙️ Setting Up Your Database</h2>
+
+      <div class="alert alert-warning">
+        <span class="alert-icon">⚠️</span>
+        <div>
+          <strong>Prerequisites:</strong> Make sure you have a MongoDB Atlas account and have created a cluster before
+          starting this section.
+        </div>
+      </div>
+
       <div class="steps">
         <div class="step">
-          <h4>Log Into Atlas</h4>
-          <p>Go to https://www.mongodb.com/cloud/atlas and log in to your account.</p>
+          <h4>Access MongoDB Atlas</h4>
+          <p>Log in to <strong>MongoDB Atlas</strong> at https://www.mongodb.com/cloud/atlas and click on your cluster.
+          </p>
         </div>
 
         <div class="step">
-          <h4>Click Your Cluster</h4>
-          <p>Find your cluster and click <strong>"Browse Collections"</strong>.</p>
+          <h4>Browse Collections</h4>
+          <p>Click the <strong>"Browse Collections"</strong> button to view your databases.</p>
         </div>
 
         <div class="step">
-          <h4>Create Database</h4>
+          <h4>Create Your Database</h4>
           <ul>
             <li>Click <strong>"Add My Own Data"</strong></li>
             <li>Database name: <span class="inline-code">JuliasCookies</span></li>
@@ -934,222 +1289,1500 @@ Components:
         </div>
       </div>
 
-      <h3>Understanding MongoDB's _id Field</h3>
-      <p>Every MongoDB document <strong>must</strong> have an <code>_id</code> field. You have two options:</p>
-
-      <div class="id-approaches">
-        <div class="id-approach recommended">
-          <h4>Approach A: Auto-Generated _id <span class="recommended-badge">RECOMMENDED</span></h4>
-          <p><strong>How it works:</strong> Let MongoDB create the <code>_id</code> automatically. Use your own IDs as
-            regular fields.</p>
-
-          <p><strong>What you insert:</strong></p>
-          <div class="code-block">
-            <div class="code-header">
-              <span class="code-label">You Type This</span>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <span>📋</span> Copy
-              </button>
-            </div>
-            <pre><code>{
-  "order_id": "SO001",
-  "customer_id": "C001",
-  "total": 37.80
-}</code></pre>
-          </div>
-
-          <p><strong>What MongoDB stores:</strong></p>
-          <div class="code-block">
-            <div class="code-header">
-              <span class="code-label">MongoDB Adds _id</span>
-            </div>
-            <pre><code>{
-  "_id": ObjectId("507f..."),  ← Added automatically
-  "order_id": "SO001",
-  "customer_id": "C001",
-  "total": 37.80
-}</code></pre>
-          </div>
-
-          <p><strong>✅ Why This is Best:</strong></p>
-          <ul>
-            <li>MongoDB guarantees uniqueness</li>
-            <li>No duplicate key errors</li>
-            <li>You keep human-readable IDs</li>
-            <li>Best for beginners</li>
-          </ul>
-
-          <div class="alert alert-success">
-            <span class="alert-icon">✅</span>
-            <div>
-              <strong>This tutorial uses Approach A!</strong> All examples let MongoDB auto-generate <code>_id</code>.
-            </div>
-          </div>
-        </div>
-
-        <div class="id-approach">
-          <h4>Approach B: Custom _id</h4>
-          <p><strong>How it works:</strong> Override <code>_id</code> with your own value.</p>
-
-          <p><strong>What you insert:</strong></p>
-          <div class="code-block">
-            <div class="code-header">
-              <span class="code-label">Custom _id</span>
-              <button class="copy-btn" onclick="copyCode(this)">
-                <span>📋</span> Copy
-              </button>
-            </div>
-            <pre><code>{
-  "_id": "SO001",  ← Your custom primary key
-  "customer_id": "C001",
-  "total": 37.80
-}</code></pre>
-          </div>
-
-          <p><strong>✅ Advantages:</strong></p>
-          <ul>
-            <li>Simpler structure (one ID)</li>
-            <li>Human-readable primary key</li>
-            <li>Good for existing ID schemes</li>
-          </ul>
-
-          <p><strong>⚠️ Cautions:</strong></p>
-          <ul>
-            <li><strong>You ensure uniqueness</strong></li>
-            <li>Fails if _id already exists</li>
-            <li>More developer responsibility</li>
-          </ul>
+      <div class="alert alert-success">
+        <span class="alert-icon">✅</span>
+        <div>
+          <strong>Success!</strong> You've created your first database and collection! MongoDB automatically added the
+          <code>_id</code> field capability to this collection.
         </div>
       </div>
 
-      <h3>How to Query with Different Approaches</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Task</th>
-            <th>Approach A</th>
-            <th>Approach B</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Find order SO001</td>
-            <td><code>{ "order_id": "SO001" }</code></td>
-            <td><code>{ "_id": "SO001" }</code></td>
-          </tr>
-          <tr>
-            <td>Find by MongoDB ID</td>
-            <td><code>{ "_id": ObjectId("...") }</code></td>
-            <td><code>{ "_id": "SO001" }</code></td>
-          </tr>
-          <tr>
-            <td>Uniqueness</td>
-            <td>MongoDB (automatic)</td>
-            <td>You (manual)</td>
-          </tr>
-        </tbody>
-      </table>
+      <h3>How to Insert Documents in MongoDB Atlas</h3>
+      <p>There are two ways to insert documents:</p>
 
-      <h3>How to Insert Documents</h3>
+      <h4>Method 1: Insert Document Button (Graphical Interface)</h4>
       <div class="steps">
         <div class="step">
           <h4>Click "Insert Document"</h4>
-          <p>In your collection, click the <strong>"Insert Document"</strong> button.</p>
+          <p>In your collection view, click the green <strong>"Insert Document"</strong> button.</p>
         </div>
 
         <div class="step">
           <h4>Switch to Code View</h4>
-          <p>Toggle to <strong>{} code view</strong> (curly braces icon).</p>
+          <p>Toggle from the visual editor to <strong>{} code view</strong> (looks like curly braces icon).</p>
         </div>
 
         <div class="step">
-          <h4>Delete Default _id</h4>
-          <p>Remove the auto-generated <code>{"_id": {"$oid": "..."}}</code> line.</p>
+          <h4>Delete Default Content</h4>
+          <p>Remove the default <code>{"_id": {"$oid": "..."}}</code> that appears.</p>
         </div>
 
         <div class="step">
-          <h4>Paste JSON</h4>
-          <p>Copy any JSON from this tutorial and paste it.</p>
+          <h4>Paste Your JSON</h4>
+          <p>Copy any of the JSON documents from this tutorial and paste them in.</p>
         </div>
 
         <div class="step">
           <h4>Click Insert</h4>
-          <p>MongoDB automatically adds <code>_id: ObjectId(...)</code>!</p>
+          <p>Click the <strong>"Insert"</strong> button. MongoDB will automatically add the <code>_id</code> field!</p>
         </div>
       </div>
-    </section>
 
-    <!-- Continue with rest of sections... Due to length constraints, I'll provide a summary of remaining sections -->
+      <h4>Method 2: MongoDB Shell (mongosh)</h4>
+      <p>If you're comfortable with the command line:</p>
+      <div class="code-block">
+        <div class="code-header">
+          <span class="code-label">Insert using mongosh</span>
+          <button class="copy-btn" onclick="copyCode(this)">
+            <span>📋</span> Copy
+          </button>
+        </div>
+        <pre><code>use JuliasCookies
 
-    <!-- Embedded Approach Section -->
-    <section id="embedded" class="section">
-      <h2>📦 Embedded Approach</h2>
-      <p>Store ALL related data in one document. Create <code>customers_embedded</code> and <code>orders_embedded</code>
-        collections.</p>
+db.customers.insertOne({
+  "customer_id": "C001",
+  "name": "John Smith",
+  "email": "john@email.com"
+})</code></pre>
+      </div>
 
       <div class="alert alert-info">
         <span class="alert-icon">💡</span>
         <div>
-          <strong>Key Concept:</strong> Customer info is duplicated in each order to preserve historical accuracy -
-          crucial for accounting audit trails!
+          <strong>Note:</strong> This tutorial focuses on <strong>Method 1</strong> (the graphical interface) as it's
+          more beginner-friendly and you can see the JSON structure clearly.
+        </div>
+      </div>
+    </section>
+
+    <section id="embedded" class="section">
+      <h2>📦 Part 1: The Embedded Approach (MongoDB Way)</h2>
+
+      <p>In this approach, we store ALL related data within a single document. This is MongoDB's strength!</p>
+
+      <h3>When to Use Embedded Documents</h3>
+      <ul>
+        <li>Data is always accessed together</li>
+        <li>Historical accuracy matters (audit trails)</li>
+        <li>One-to-few relationships (e.g., one order with 1-10 line items)</li>
+        <li>Read performance is critical</li>
+      </ul>
+
+      <h3>Step 1: Create Collections</h3>
+      <p>Create these two collections:</p>
+      <ol>
+        <li><span class="inline-code">customers_embedded</span> - Customer master data</li>
+        <li><span class="inline-code">orders_embedded</span> - Orders with embedded customer and product data</li>
+      </ol>
+
+      <h3>Step 2: Insert Customer Data</h3>
+      <p>In the <span class="inline-code">customers_embedded</span> collection, insert these documents:</p>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Customer 1: John Smith</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">JSON Document</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "customer_id": "C001",
+  "name": "John Smith",
+  "email": "john@email.com",
+  "phone": "555-0101",
+  "address": {
+    "street": "123 Main St",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "60601"
+  },
+  "credit_limit": 5000.00,
+  "credit_terms": "Net 30",
+  "registration_date": "2023-12-01"
+}</code></pre>
+            </div>
+            <div class="alert alert-info">
+              <span class="alert-icon">🔍</span>
+              <div>
+                <strong>What happens:</strong> When you insert this, MongoDB automatically adds:<br>
+                <code>"_id": ObjectId("...")</code> at the beginning of the document.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Include all customer and order documents from previous version with copy buttons -->
-      <!-- (Due to space, showing structure only) -->
-    </section>
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Customer 2: Sarah Jones</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">JSON Document</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "customer_id": "C002",
+  "name": "Sarah Jones",
+  "email": "sarah@email.com",
+  "phone": "555-0102",
+  "address": {
+    "street": "456 Oak Ave",
+    "city": "Naperville",
+    "state": "IL",
+    "zip": "60540"
+  },
+  "credit_limit": 3000.00,
+  "credit_terms": "Net 30",
+  "registration_date": "2024-01-10"
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Referenced Approach Section -->
-    <section id="referenced" class="section">
-      <h2>🔗 Referenced Approach</h2>
-      <p>Link documents using IDs. Create 4 collections: <code>customers_ref</code>, <code>products_ref</code>,
-        <code>orders_ref</code>, <code>order_items_ref</code>.</p>
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Customer 3: Michael Chen</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">JSON Document</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "customer_id": "C003",
+  "name": "Michael Chen",
+  "email": "michael@email.com",
+  "phone": "555-0103",
+  "address": {
+    "street": "789 Elm Blvd",
+    "city": "Aurora",
+    "state": "IL",
+    "zip": "60505"
+  },
+  "credit_limit": 10000.00,
+  "credit_terms": "Net 45",
+  "registration_date": "2023-11-15"
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <!-- Include all documents from previous version -->
-    </section>
+      <h3>Step 3: Insert Order Data (Embedded)</h3>
+      <p>Now insert orders in the <span class="inline-code">orders_embedded</span> collection with embedded customer and
+        product data:</p>
 
-    <!-- Comparison Section -->
-    <section id="comparison" class="section">
-      <h2>⚖️ Comparison</h2>
-      <!-- Include comparison table and cards -->
-    </section>
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Order SO001 - John Smith (2 items)</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">JSON Document</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_id": "SO001",
+  "order_date": "2024-01-15",
+  "customer": {
+    "customer_id": "C001",
+    "name": "John Smith",
+    "email": "john@email.com",
+    "phone": "555-0101"
+  },
+  "shipping_address": {
+    "street": "123 Main St",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "60601"
+  },
+  "items": [
+    {
+      "product_id": "P001",
+      "product_name": "Chocolate Chip Cookies (Dozen)",
+      "quantity": 2,
+      "unit_price": 12.00,
+      "subtotal": 24.00
+    },
+    {
+      "product_id": "P003",
+      "product_name": "Sugar Cookies (Dozen)",
+      "quantity": 1,
+      "unit_price": 11.00,
+      "subtotal": 11.00
+    }
+  ],
+  "order_total": 35.00,
+  "tax": 2.80,
+  "grand_total": 37.80,
+  "payment_method": "Credit Card",
+  "order_status": "Completed",
+  "shipment_date": "2024-01-16"
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Exercises Section -->
-    <section id="exercises" class="section">
-      <h2>🎯 Practice Exercises</h2>
-      <!-- Include all 5 exercises -->
-    </section>
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Order SO002 - Sarah Jones (1 item)</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">JSON Document</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_id": "SO002",
+  "order_date": "2024-01-16",
+  "customer": {
+    "customer_id": "C002",
+    "name": "Sarah Jones",
+    "email": "sarah@email.com",
+    "phone": "555-0102"
+  },
+  "shipping_address": {
+    "street": "456 Oak Ave",
+    "city": "Naperville",
+    "state": "IL",
+    "zip": "60540"
+  },
+  "items": [
+    {
+      "product_id": "P002",
+      "product_name": "Oatmeal Raisin Cookies (Dozen)",
+      "quantity": 3,
+      "unit_price": 10.00,
+      "subtotal": 30.00
+    }
+  ],
+  "order_total": 30.00,
+  "tax": 2.40,
+  "grand_total": 32.40,
+  "payment_method": "Debit Card",
+  "order_status": "Shipped",
+  "shipment_date": "2024-01-17"
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Conclusion -->
-    <section class="section">
-      <h2>🎓 Conclusion</h2>
-      <div class="alert alert-success">
-        <span class="alert-icon">🎉</span>
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Order SO003 - Michael Chen (3 items, Large Order)</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">JSON Document</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_id": "SO003",
+  "order_date": "2024-01-18",
+  "customer": {
+    "customer_id": "C003",
+    "name": "Michael Chen",
+    "email": "michael@email.com",
+    "phone": "555-0103"
+  },
+  "shipping_address": {
+    "street": "789 Elm Blvd",
+    "city": "Aurora",
+    "state": "IL",
+    "zip": "60505"
+  },
+  "items": [
+    {
+      "product_id": "P001",
+      "product_name": "Chocolate Chip Cookies (Dozen)",
+      "quantity": 5,
+      "unit_price": 12.00,
+      "subtotal": 60.00
+    },
+    {
+      "product_id": "P002",
+      "product_name": "Oatmeal Raisin Cookies (Dozen)",
+      "quantity": 3,
+      "unit_price": 10.00,
+      "subtotal": 30.00
+    },
+    {
+      "product_id": "P003",
+      "product_name": "Sugar Cookies (Dozen)",
+      "quantity": 4,
+      "unit_price": 11.00,
+      "subtotal": 44.00
+    }
+  ],
+  "order_total": 134.00,
+  "tax": 10.72,
+  "grand_total": 144.72,
+  "payment_method": "Invoice",
+  "order_status": "Pending",
+  "shipment_date": null
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Order SO004 - John Smith (1 item, Repeat Customer)</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">JSON Document</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_id": "SO004",
+  "order_date": "2024-01-20",
+  "customer": {
+    "customer_id": "C001",
+    "name": "John Smith",
+    "email": "john@email.com",
+    "phone": "555-0101"
+  },
+  "shipping_address": {
+    "street": "123 Main St",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "60601"
+  },
+  "items": [
+    {
+      "product_id": "P002",
+      "product_name": "Oatmeal Raisin Cookies (Dozen)",
+      "quantity": 4,
+      "unit_price": 10.00,
+      "subtotal": 40.00
+    }
+  ],
+  "order_total": 40.00,
+  "tax": 3.20,
+  "grand_total": 43.20,
+  "payment_method": "Credit Card",
+  "order_status": "Completed",
+  "shipment_date": "2024-01-21"
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Step 4: Query Embedded Documents</h3>
+      <p>Now let's run queries that accountants typically need!</p>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Query 1: Find All Orders for a Customer</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>Use Case:</strong> Customer order history for accounts receivable analysis</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Filter Query</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{ "customer.customer_id": "C001" }</code></pre>
+            </div>
+            <p><strong>Result:</strong> Returns orders SO001 and SO004 (both for John Smith)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Query 2: Find Pending Orders</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>Use Case:</strong> Pending orders represent unfulfilled revenue obligations</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Filter Query</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{ "order_status": "Pending" }</code></pre>
+            </div>
+            <p><strong>Result:</strong> Returns order SO003</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Query 3: Find Large Orders (Over $100)</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>Use Case:</strong> Large orders may require special approval or credit checks</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Filter Query</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{ "grand_total": { "$gt": 100 } }</code></pre>
+            </div>
+            <p><strong>Result:</strong> Returns order SO003 (grand total: $144.72)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Query 4: Find Orders with Specific Product</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>Use Case:</strong> Product profitability analysis and inventory planning</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Filter Query</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{ "items.product_id": "P001" }</code></pre>
+            </div>
+            <p><strong>Result:</strong> Returns orders SO001 and SO003 (both contain Chocolate Chip cookies)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-info">
+        <span class="alert-icon">💡</span>
         <div>
-          <strong>Congratulations!</strong> You now understand:
-          <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
-            <li>JSON syntax and BSON extensions</li>
-            <li>MongoDB's _id field (auto vs custom)</li>
-            <li>Embedded vs. referenced document design</li>
-            <li>When to use each approach for accounting data</li>
+          <strong>Key Observation:</strong> Customer data (name, email, phone) is duplicated in each order. This is
+          intentional! It preserves the data as it was at the time of the transaction - crucial for accounting audit
+          trails.
+        </div>
+      </div>
+    </section>
+
+    <section id="referenced" class="section">
+      <h2>🔗 Part 2: The Referenced Approach (Relational Way)</h2>
+
+      <p>Now let's implement the same system using references - similar to foreign keys in relational databases.</p>
+
+      <h3>When to Use Referenced Documents</h3>
+      <ul>
+        <li>Data changes frequently and needs to stay consistent</li>
+        <li>Master data tables (customers, products, employees)</li>
+        <li>Many-to-many relationships</li>
+        <li>Storage optimization is important</li>
+      </ul>
+
+      <h3>Step 1: Create Collections</h3>
+      <p>Create these FOUR collections:</p>
+      <ol>
+        <li><span class="inline-code">customers_ref</span> - Customer master data</li>
+        <li><span class="inline-code">products_ref</span> - Product master data</li>
+        <li><span class="inline-code">orders_ref</span> - Order headers</li>
+        <li><span class="inline-code">order_items_ref</span> - Order line items</li>
+      </ol>
+
+      <h3>Step 2: Insert Customer Master Data</h3>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">All 3 Customers for customers_ref</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p>Insert these three documents in <span class="inline-code">customers_ref</span>:</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Customer 1</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "customer_id": "C001",
+  "name": "John Smith",
+  "email": "john@email.com",
+  "phone": "555-0101",
+  "address": {
+    "street": "123 Main St",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": "60601"
+  },
+  "credit_limit": 5000.00,
+  "credit_terms": "Net 30",
+  "registration_date": "2023-12-01",
+  "active": true
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Customer 2</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "customer_id": "C002",
+  "name": "Sarah Jones",
+  "email": "sarah@email.com",
+  "phone": "555-0102",
+  "address": {
+    "street": "456 Oak Ave",
+    "city": "Naperville",
+    "state": "IL",
+    "zip": "60540"
+  },
+  "credit_limit": 3000.00,
+  "credit_terms": "Net 30",
+  "registration_date": "2024-01-10",
+  "active": true
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Customer 3</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "customer_id": "C003",
+  "name": "Michael Chen",
+  "email": "michael@email.com",
+  "phone": "555-0103",
+  "address": {
+    "street": "789 Elm Blvd",
+    "city": "Aurora",
+    "state": "IL",
+    "zip": "60505"
+  },
+  "credit_limit": 10000.00,
+  "credit_terms": "Net 45",
+  "registration_date": "2023-11-15",
+  "active": true
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Step 3: Insert Product Master Data</h3>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">All 3 Products for products_ref</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p>Insert these three products in <span class="inline-code">products_ref</span>:</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Product 1</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "product_id": "P001",
+  "product_name": "Chocolate Chip Cookies (Dozen)",
+  "category": "Classic Cookies",
+  "unit_price": 12.00,
+  "cost": 6.50,
+  "inventory_on_hand": 150,
+  "active": true
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Product 2</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "product_id": "P002",
+  "product_name": "Oatmeal Raisin Cookies (Dozen)",
+  "category": "Classic Cookies",
+  "unit_price": 10.00,
+  "cost": 5.50,
+  "inventory_on_hand": 120,
+  "active": true
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Product 3</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "product_id": "P003",
+  "product_name": "Sugar Cookies (Dozen)",
+  "category": "Classic Cookies",
+  "unit_price": 11.00,
+  "cost": 6.00,
+  "inventory_on_hand": 100,
+  "active": true
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Step 4: Insert Order Headers</h3>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">All 4 Order Headers for orders_ref</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p>Notice: Orders only contain <span class="inline-code">customer_id</span> (a reference), not full customer
+              data!</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Order SO001</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_id": "SO001",
+  "customer_id": "C001",
+  "order_date": "2024-01-15",
+  "order_total": 35.00,
+  "tax": 2.80,
+  "grand_total": 37.80,
+  "payment_method": "Credit Card",
+  "order_status": "Completed",
+  "shipment_date": "2024-01-16"
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Order SO002</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_id": "SO002",
+  "customer_id": "C002",
+  "order_date": "2024-01-16",
+  "order_total": 30.00,
+  "tax": 2.40,
+  "grand_total": 32.40,
+  "payment_method": "Debit Card",
+  "order_status": "Shipped",
+  "shipment_date": "2024-01-17"
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Order SO003</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_id": "SO003",
+  "customer_id": "C003",
+  "order_date": "2024-01-18",
+  "order_total": 134.00,
+  "tax": 10.72,
+  "grand_total": 144.72,
+  "payment_method": "Invoice",
+  "order_status": "Pending",
+  "shipment_date": null
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Order SO004</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_id": "SO004",
+  "customer_id": "C001",
+  "order_date": "2024-01-20",
+  "order_total": 40.00,
+  "tax": 3.20,
+  "grand_total": 43.20,
+  "payment_method": "Credit Card",
+  "order_status": "Completed",
+  "shipment_date": "2024-01-21"
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Step 5: Insert Order Line Items</h3>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">All 7 Line Items for order_items_ref</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p>Insert these line items in <span class="inline-code">order_items_ref</span>:</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Line Item OI001 (SO001)</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_item_id": "OI001",
+  "order_id": "SO001",
+  "product_id": "P001",
+  "quantity": 2,
+  "unit_price": 12.00,
+  "subtotal": 24.00
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Line Item OI002 (SO001)</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_item_id": "OI002",
+  "order_id": "SO001",
+  "product_id": "P003",
+  "quantity": 1,
+  "unit_price": 11.00,
+  "subtotal": 11.00
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Line Item OI003 (SO002)</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_item_id": "OI003",
+  "order_id": "SO002",
+  "product_id": "P002",
+  "quantity": 3,
+  "unit_price": 10.00,
+  "subtotal": 30.00
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Line Item OI004 (SO003)</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_item_id": "OI004",
+  "order_id": "SO003",
+  "product_id": "P001",
+  "quantity": 5,
+  "unit_price": 12.00,
+  "subtotal": 60.00
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Line Item OI005 (SO003)</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_item_id": "OI005",
+  "order_id": "SO003",
+  "product_id": "P002",
+  "quantity": 3,
+  "unit_price": 10.00,
+  "subtotal": 30.00
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Line Item OI006 (SO003)</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_item_id": "OI006",
+  "order_id": "SO003",
+  "product_id": "P003",
+  "quantity": 4,
+  "unit_price": 11.00,
+  "subtotal": 44.00
+}</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Line Item OI007 (SO004)</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_item_id": "OI007",
+  "order_id": "SO004",
+  "product_id": "P002",
+  "quantity": 4,
+  "unit_price": 10.00,
+  "subtotal": 40.00
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-success">
+        <span class="alert-icon">✅</span>
+        <div>
+          <strong>Checkpoint:</strong> You should now have 3 customers, 3 products, 4 orders, and 7 line items across
+          four collections!
+        </div>
+      </div>
+
+      <h3>Step 6: Query Referenced Documents</h3>
+
+      <div class="alert alert-warning">
+        <span class="alert-icon">⚠️</span>
+        <div>
+          <strong>Important:</strong> Querying with references requires multiple queries (similar to SQL joins). You
+          need to query each collection separately.
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Example: Find Order Details with Line Items</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>Step 1:</strong> Find the order in <span class="inline-code">orders_ref</span></p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Query</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{ "order_id": "SO003" }</code></pre>
+            </div>
+            <p><strong>Step 2:</strong> Find line items in <span class="inline-code">order_items_ref</span></p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Query</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{ "order_id": "SO003" }</code></pre>
+            </div>
+            <p><strong>Result:</strong> Returns 3 line items (OI004, OI005, OI006)</p>
+            <p><strong>Note:</strong> You need TWO queries to see complete order details!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparison" class="section">
+      <h2>⚖️ Comparing the Two Approaches</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>Embedded Approach</th>
+            <th>Referenced Approach</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Number of Collections</strong></td>
+            <td>2 collections</td>
+            <td>4 collections</td>
+          </tr>
+          <tr>
+            <td><strong>Data Duplication</strong></td>
+            <td>Yes (customer info in each order)</td>
+            <td>No (customer stored once)</td>
+          </tr>
+          <tr>
+            <td><strong>Query Complexity</strong></td>
+            <td>Simple (1 query)</td>
+            <td>Complex (multiple queries)</td>
+          </tr>
+          <tr>
+            <td><strong>Data Updates</strong></td>
+            <td>Must update in multiple places</td>
+            <td>Update once in master data</td>
+          </tr>
+          <tr>
+            <td><strong>Historical Accuracy</strong></td>
+            <td>Preserves data at transaction time</td>
+            <td>Always shows current data</td>
+          </tr>
+          <tr>
+            <td><strong>Performance</strong></td>
+            <td>Faster (single read)</td>
+            <td>Slower (multiple reads)</td>
+          </tr>
+          <tr>
+            <td><strong>Storage Space</strong></td>
+            <td>More (duplication)</td>
+            <td>Less (normalized)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>When to Use Each Approach</h3>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <h3>📦 Use Embedded When:</h3>
+          <ul>
+            <li>Data is always accessed together</li>
+            <li>Historical accuracy matters (audit trails)</li>
+            <li>One-to-few relationships (1-20 items)</li>
+            <li>Read performance is critical</li>
+            <li>Data doesn't change frequently</li>
+          </ul>
+          <h4 style="color: var(--amber); margin-top: 1rem;">Accounting Examples:</h4>
+          <ul>
+            <li>✅ Sales orders with line items</li>
+            <li>✅ Invoices with payment details</li>
+            <li>✅ Journal entries with line items</li>
+            <li>✅ Employee with timecard data</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card">
+          <h3>🔗 Use Referenced When:</h3>
+          <ul>
+            <li>Data changes frequently</li>
+            <li>Master data tables</li>
+            <li>Many-to-many relationships</li>
+            <li>Storage optimization needed</li>
+            <li>Data integrity is critical</li>
+          </ul>
+          <h4 style="color: var(--amber); margin-top: 1rem;">Accounting Examples:</h4>
+          <ul>
+            <li>✅ Customer master data</li>
+            <li>✅ Product catalogs</li>
+            <li>✅ Chart of accounts</li>
+            <li>✅ Vendor information</li>
           </ul>
         </div>
       </div>
+
+      <div class="alert alert-info">
+        <span class="alert-icon">💡</span>
+        <div>
+          <strong>Best Practice - Hybrid Approach:</strong> Most real-world systems use BOTH! Reference master data
+          (customer_id, product_id) but embed transaction details (line items) and store key snapshots (prices at time
+          of sale).
+        </div>
+      </div>
     </section>
 
+    <section id="exercises" class="section">
+      <h2>🎯 Practice Exercises</h2>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Exercise 1: Calculate Total Revenue by Customer</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>Task:</strong> Find the total revenue (sum of grand_total) for each customer.</p>
+            <p><strong>Collection:</strong> Use <span class="inline-code">orders_embedded</span></p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Aggregation Pipeline</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>[
+  {
+    "$group": {
+      "_id": "$customer.customer_id",
+      "customer_name": { "$first": "$customer.name" },
+      "total_revenue": { "$sum": "$grand_total" },
+      "order_count": { "$sum": 1 }
+    }
+  },
+  {
+    "$sort": { "total_revenue": -1 }
+  }
+]</code></pre>
+            </div>
+            <p><strong>Expected Results:</strong></p>
+            <ul>
+              <li>Michael Chen (C003): $144.72</li>
+              <li>John Smith (C001): $81.00 ($37.80 + $43.20)</li>
+              <li>Sarah Jones (C002): $32.40</li>
+            </ul>
+            <p><strong>Accounting Application:</strong> Customer revenue report / Accounts receivable aging summary</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Exercise 2: Find Most Popular Products</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>Task:</strong> Identify which products are ordered most frequently.</p>
+            <p><strong>Collection:</strong> Use <span class="inline-code">order_items_ref</span></p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Aggregation Pipeline</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>[
+  {
+    "$group": {
+      "_id": "$product_id",
+      "total_quantity_sold": { "$sum": "$quantity" },
+      "total_revenue": { "$sum": "$subtotal" },
+      "order_count": { "$sum": 1 }
+    }
+  },
+  {
+    "$sort": { "total_quantity_sold": -1 }
+  }
+]</code></pre>
+            </div>
+            <p><strong>Expected Results:</strong></p>
+            <ul>
+              <li>P002 (Oatmeal Raisin): 10 dozen sold</li>
+              <li>P001 (Chocolate Chip): 7 dozen sold</li>
+              <li>P003 (Sugar): 5 dozen sold</li>
+            </ul>
+            <p><strong>Accounting Application:</strong> Product profitability analysis for cost accounting</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Exercise 3: Find Unpaid Invoices</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>Task:</strong> List all orders that are not yet completed (Pending or Shipped).</p>
+            <p><strong>Collection:</strong> Use either <span class="inline-code">orders_embedded</span> or <span
+                class="inline-code">orders_ref</span></p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Filter Query</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{ "order_status": { "$ne": "Completed" } }</code></pre>
+            </div>
+            <p><strong>Expected Results:</strong></p>
+            <ul>
+              <li>SO002 (status: "Shipped")</li>
+              <li>SO003 (status: "Pending")</li>
+            </ul>
+            <p><strong>Accounting Application:</strong> Outstanding invoices report for cash flow management</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Exercise 4: Calculate Average Order Value</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>Task:</strong> What is the average order value (grand_total)?</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">Aggregation Pipeline</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>[
+  {
+    "$group": {
+      "_id": null,
+      "average_order_value": { "$avg": "$grand_total" },
+      "total_orders": { "$sum": 1 },
+      "total_revenue": { "$sum": "$grand_total" }
+    }
+  }
+]</code></pre>
+            </div>
+            <p><strong>Expected Result:</strong> Average Order Value: ~$64.53 ($258.12 ÷ 4 orders)</p>
+            <p><strong>Accounting Application:</strong> Key performance indicator for sales analytics</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible">
+        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+          <span class="collapsible-title">Exercise 5: Add a New Order</span>
+          <span class="collapsible-icon">▼</span>
+        </div>
+        <div class="collapsible-content">
+          <div class="collapsible-body">
+            <p><strong>Task:</strong> Create a new order for Sarah Jones:</p>
+            <ul>
+              <li>2 dozen Chocolate Chip ($12.00 each = $24.00)</li>
+              <li>1 dozen Sugar Cookie ($11.00)</li>
+              <li>Order total: $35.00</li>
+              <li>Tax (8%): $2.80</li>
+              <li>Grand total: $37.80</li>
+            </ul>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-label">New Order Document (orders_embedded)</span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <span>📋</span> Copy
+                </button>
+              </div>
+              <pre><code>{
+  "order_id": "SO005",
+  "order_date": "2024-01-22",
+  "customer": {
+    "customer_id": "C002",
+    "name": "Sarah Jones",
+    "email": "sarah@email.com",
+    "phone": "555-0102"
+  },
+  "shipping_address": {
+    "street": "456 Oak Ave",
+    "city": "Naperville",
+    "state": "IL",
+    "zip": "60540"
+  },
+  "items": [
+    {
+      "product_id": "P001",
+      "product_name": "Chocolate Chip Cookies (Dozen)",
+      "quantity": 2,
+      "unit_price": 12.00,
+      "subtotal": 24.00
+    },
+    {
+      "product_id": "P003",
+      "product_name": "Sugar Cookies (Dozen)",
+      "quantity": 1,
+      "unit_price": 11.00,
+      "subtotal": 11.00
+    }
+  ],
+  "order_total": 35.00,
+  "tax": 2.80,
+  "grand_total": 37.80,
+  "payment_method": "Credit Card",
+  "order_status": "Completed",
+  "shipment_date": "2024-01-23"
+}</code></pre>
+            </div>
+            <p><strong>Verification:</strong> Run Exercise 1 again. Sarah's total should now be $70.20 ($32.40 +
+              $37.80).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reference" class="section">
+      <h2>📖 Quick Reference</h2>
+
+      <h3>JSON Data Types</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Example</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>String</td>
+            <td><code>"John Smith"</code></td>
+            <td>Double quotes required</td>
+          </tr>
+          <tr>
+            <td>Number</td>
+            <td><code>42</code> or <code>12.50</code></td>
+            <td>No quotes</td>
+          </tr>
+          <tr>
+            <td>Boolean</td>
+            <td><code>true</code> or <code>false</code></td>
+            <td>Lowercase, no quotes</td>
+          </tr>
+          <tr>
+            <td>Null</td>
+            <td><code>null</code></td>
+            <td>Represents no value</td>
+          </tr>
+          <tr>
+            <td>Array</td>
+            <td><code>[1, 2, "three"]</code></td>
+            <td>Square brackets</td>
+          </tr>
+          <tr>
+            <td>Object</td>
+            <td><code>{"key": "value"}</code></td>
+            <td>Curly braces</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Basic Query Patterns</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Query Type</th>
+            <th>Syntax</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Find all</td>
+            <td><code>{}</code></td>
+            <td>Returns all documents</td>
+          </tr>
+          <tr>
+            <td>Exact match</td>
+            <td><code>{ "field": "value" }</code></td>
+            <td><code>{ "status": "Pending" }</code></td>
+          </tr>
+          <tr>
+            <td>Greater than</td>
+            <td><code>{ "field": { "$gt": value } }</code></td>
+            <td><code>{ "total": { "$gt": 100 } }</code></td>
+          </tr>
+          <tr>
+            <td>Not equal</td>
+            <td><code>{ "field": { "$ne": value } }</code></td>
+            <td><code>{ "status": { "$ne": "Cancelled" } }</code></td>
+          </tr>
+          <tr>
+            <td>AND condition</td>
+            <td><code>{ "f1": v1, "f2": v2 }</code></td>
+            <td><code>{ "status": "Pending", "total": { "$gt": 50 } }</code></td>
+          </tr>
+          <tr>
+            <td>OR condition</td>
+            <td><code>{ "$or": [{...}, {...}] }</code></td>
+            <td><code>{ "$or": [{"status": "Pending"}, {"status": "Shipped"}] }</code></td>
+          </tr>
+          <tr>
+            <td>Nested field</td>
+            <td><code>{ "parent.child": value }</code></td>
+            <td><code>{ "customer.name": "John Smith" }</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Aggregation Pipeline Stages</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>Purpose</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>$match</code></td>
+            <td>Filter documents</td>
+            <td><code>{ "$match": { "status": "Completed" } }</code></td>
+          </tr>
+          <tr>
+            <td><code>$group</code></td>
+            <td>Aggregate by field</td>
+            <td><code>{ "$group": { "_id": "$customer_id", "total": { "$sum": "$amount" } } }</code></td>
+          </tr>
+          <tr>
+            <td><code>$sort</code></td>
+            <td>Sort results</td>
+            <td><code>{ "$sort": { "total": -1 } }</code></td>
+          </tr>
+          <tr>
+            <td><code>$limit</code></td>
+            <td>Limit results</td>
+            <td><code>{ "$limit": 10 }</code></td>
+          </tr>
+          <tr>
+            <td><code>$sum</code></td>
+            <td>Add values</td>
+            <td><code>{ "$sum": "$amount" }</code> or <code>{ "$sum": 1 }</code> for count</td>
+          </tr>
+          <tr>
+            <td><code>$avg</code></td>
+            <td>Average values</td>
+            <td><code>{ "$avg": "$price" }</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Decision Tree: Embedded vs Referenced</h3>
+      <div
+        style="background-color: var(--bg-tertiary); padding: 1.5rem; border-radius: 0.75rem; border: 1px solid var(--border);">
+        <ol style="line-height: 2;">
+          <li><strong style="color: var(--amber);">Is data always accessed together?</strong>
+            <br>→ YES: Consider Embedded | NO: Consider Referenced
+          </li>
+          <li><strong style="color: var(--amber);">How many related items?</strong>
+            <br>→ 1-20 items: Embedded works | 100+ items: Referenced better
+          </li>
+          <li><strong style="color: var(--amber);">Does data change frequently?</strong>
+            <br>→ YES: Referenced (easier updates) | NO: Embedded (better performance)
+          </li>
+          <li><strong style="color: var(--amber);">Need historical snapshots?</strong>
+            <br>→ YES: Embedded (preserves history) | NO: Referenced (current data)
+          </li>
+          <li><strong style="color: var(--amber);">Is read speed critical?</strong>
+            <br>→ YES: Embedded (single query) | NO: Referenced acceptable
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>🎓 Conclusion and Key Takeaways</h2>
+
+      <h3>What You Learned</h3>
+      <ul>
+        <li><strong>JSON Fundamentals:</strong> Data types, syntax rules, and structure</li>
+        <li><strong>MongoDB & BSON:</strong> How MongoDB extends JSON with binary format and special types (ObjectId,
+          Date, Decimal128)</li>
+        <li><strong>ID Strategies:</strong> Auto-generated <code>_id</code> vs custom <code>_id</code> approaches</li>
+        <li><strong>Document Insertion:</strong> How to insert documents using MongoDB Atlas</li>
+        <li><strong>Two Design Patterns:</strong> Embedded (nest data) vs. Referenced (link data with IDs)</li>
+        <li><strong>Trade-offs:</strong> Embedded = faster but duplicates; Referenced = normalized but slower</li>
+        <li><strong>Query Techniques:</strong> Basic filters, aggregation pipelines, and accounting queries</li>
+        <li><strong>Accounting Applications:</strong> Revenue analysis, AR aging, product profitability</li>
+      </ul>
+
+      <h3>Connection to Accounting</h3>
+      <ul>
+        <li><strong>Audit Trails:</strong> Embedded approach preserves historical accuracy</li>
+        <li><strong>Master Data:</strong> Referenced approach keeps customer/product data consistent</li>
+        <li><strong>Reporting:</strong> Aggregation pipelines enable powerful financial analysis</li>
+        <li><strong>ERP Systems:</strong> Understanding both paradigms prepares you for modern accounting systems</li>
+        <li><strong>GAAP Compliance:</strong> Embedded pricing preserves transaction-date values for revenue recognition
+        </li>
+      </ul>
+
+      <div class="alert alert-success">
+        <span class="alert-icon">🎉</span>
+        <div>
+          <strong>Congratulations!</strong> You now understand JSON, BSON, and how MongoDB differs from relational
+          databases. You can choose between embedded and referenced approaches based on your specific accounting needs!
+        </div>
+      </div>
+
+      <h3>Next Steps</h3>
+      <ul>
+        <li>Practice with more complex queries and aggregations</li>
+        <li>Try creating your own collections for different business scenarios</li>
+        <li>Compare this with a relational database implementation</li>
+        <li>Explore MongoDB features like indexes, transactions, and schema validation</li>
+        <li>Learn about MongoDB's $lookup operator for joining referenced collections</li>
+        <li>Study how modern ERP systems use hybrid approaches</li>
+      </ul>
+    </section>
   </div>
 
-  <!-- Footer -->
   <div class="footer">
-    <p>MongoDB Tutorial © 2024 | Julia's Cookies Example</p>
+    <p>MongoDB Tutorial © 2024</p>
+    <p style="margin-top: 0.5rem;">Educational Resource | Julia's Cookies Business Scenario</p>
   </div>
 
-  <!-- Back to Top Button -->
   <button class="back-to-top" onclick="scrollToTop()">↑</button>
 
-  <!-- JavaScript -->
   <script>
-    // Copy code functionality
     function copyCode( button ) {
       const codeBlock = button.closest( '.code-block' );
       const code = codeBlock.querySelector( 'code' ).textContent;
@@ -1165,17 +2798,15 @@ Components:
         }, 2000 );
       } ).catch( err => {
         console.error( 'Failed to copy:', err );
-        alert( 'Failed to copy. Please copy manually.' );
+        alert( 'Failed to copy code. Please copy manually.' );
       } );
     }
 
-    // Collapsible sections
     function toggleCollapsible( header ) {
       const collapsible = header.parentElement;
       collapsible.classList.toggle( 'active' );
     }
 
-    // Toggle header minimize
     function toggleHeader() {
       const header = document.querySelector( '.header' );
       const icon = document.getElementById( 'toggle-icon' );
@@ -1192,7 +2823,6 @@ Components:
       }
     }
 
-    // Back to top button
     window.onscroll = function () {
       const backToTop = document.querySelector( '.back-to-top' );
       if ( document.body.scrollTop > 300 || document.documentElement.scrollTop > 300 ) {
@@ -1203,18 +2833,27 @@ Components:
     };
 
     function scrollToTop() {
-      window.scrollTo( { top: 0, behavior: 'smooth' } );
+      window.scrollTo( {
+        top: 0,
+        behavior: 'smooth'
+      } );
     }
 
-    // Smooth scroll for navigation
     document.querySelectorAll( 'a[href^="#"]' ).forEach( anchor => {
       anchor.addEventListener( 'click', function ( e ) {
         e.preventDefault();
         const target = document.querySelector( this.getAttribute( 'href' ) );
         if ( target ) {
-          target.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+          target.scrollIntoView( {
+            behavior: 'smooth',
+            block: 'start'
+          } );
         }
       } );
+    } );
+
+    document.addEventListener( 'DOMContentLoaded', function () {
+      console.log( 'MongoDB Tutorial loaded successfully!' );
     } );
   </script>
 </body>
